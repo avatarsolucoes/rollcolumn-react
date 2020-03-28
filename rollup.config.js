@@ -7,6 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import postcssUrl from 'postcss-url';
 import postcssImport from 'postcss-import';
+import typescript from 'rollup-plugin-typescript2';
 import pkg from './package.json';
 
 function makeExternalPredicate(externalArr) {
@@ -55,6 +56,27 @@ export default {
     }),
     babel({
       exclude: 'node_modules/**',
+    }),
+    typescript({
+      tsconfigOverride: {
+        compilerOptions: {
+          declaration: true,
+          declarationDir: pkg.typings,
+          declarationMap: true,
+        },
+        include: ['./packages'],
+        exclude: [
+          'node_modules',
+          'build',
+          'dist',
+          'example',
+          'rollup.config.js',
+          'packages/__tests__',
+          'packages/setup*.js',
+        ],
+      },
+      rollupCommonJSResolveHack: false,
+      clean: true,
     }),
     resolve(),
     commonjs(),
