@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test formats Test shallow  1`] = `"<style></style><div id=\\"myName\\" class=\\"\\"><div class=\\"\\" style=\\"width:300%;max-width:300%\\"><div id=\\"rollcolumn-item-myName-1\\" class=\\"\\"><p>Content 1</p><label id=\\"rollcolumn-label-myName-2\\" for=\\"\\" class=\\"\\">goto 2</label><button type=\\"button\\" class=\\"goto\\">GOTO 2</button></div><div id=\\"rollcolumn-item-myName-2\\" class=\\"\\"><p>Content 1</p><label id=\\"rollcolumn-label-myName-1\\" for=\\"\\" class=\\"\\">back to 1</label><label id=\\"rollcolumn-label-myName-3\\" for=\\"\\" class=\\"\\">back to 3</label><button type=\\"button\\" class=\\"goto\\">GOTO 1</button></div><div id=\\"rollcolumn-item-myName-3\\" class=\\"\\"><p>Content 3</p><label id=\\"rollcolumn-label-myName-1\\" for=\\"\\" class=\\"\\">back to 1</label><label id=\\"rollcolumn-label-myName-2\\" for=\\"\\" class=\\"\\">back to 2</label></div></div></div>"`;
+
+exports[`Test formats render RollColumn 1`] = `ReactWrapper {}`;
+
+exports[`Test formats render renderer RollColumn 1`] = `
+Object {
+  "text": Array [
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "",
+        }
+      }
+    />,
+    <div
+      className=""
+      id="myName"
+    >
+      <div
+        className=""
+        style={
+          Object {
+            "maxWidth": "300%",
+            "width": "300%",
+          }
+        }
+      >
+        <div
+          className=""
+          id="rollcolumn-item-myName-1"
+          style={
+            Object {
+              "order": undefined,
+            }
+          }
+        >
+          <p>
+            Content 1
+          </p>
+          <label
+            className=""
+            htmlFor=""
+            icon={null}
+            id="rollcolumn-label-myName-2"
+            onClick={[Function]}
+            store={null}
+            style={null}
+          >
+            goto 2
+          </label>
+          <button
+            className="goto"
+            onClick={[Function]}
+            type="button"
+          >
+            GOTO 2
+          </button>
+        </div>
+        <div
+          className=""
+          id="rollcolumn-item-myName-2"
+          style={
+            Object {
+              "order": undefined,
+            }
+          }
+        >
+          <p>
+            Content 1
+          </p>
+          <label
+            className=""
+            htmlFor=""
+            icon={null}
+            id="rollcolumn-label-myName-1"
+            onClick={[Function]}
+            store={null}
+            style={null}
+          >
+            back to 1
+          </label>
+          <label
+            className=""
+            htmlFor=""
+            icon={null}
+            id="rollcolumn-label-myName-3"
+            onClick={[Function]}
+            store={null}
+            style={null}
+          >
+            back to 3
+          </label>
+          <button
+            className="goto"
+            onClick={[Function]}
+            type="button"
+          >
+            GOTO 1
+          </button>
+        </div>
+        <div
+          className=""
+          id="rollcolumn-item-myName-3"
+          style={
+            Object {
+              "order": undefined,
+            }
+          }
+        >
+          <p>
+            Content 3
+          </p>
+          <label
+            className=""
+            htmlFor=""
+            icon={null}
+            id="rollcolumn-label-myName-1"
+            onClick={[Function]}
+            store={null}
+            style={null}
+          >
+            back to 1
+          </label>
+          <label
+            className=""
+            htmlFor=""
+            icon={null}
+            id="rollcolumn-label-myName-2"
+            onClick={[Function]}
+            store={null}
+            style={null}
+          >
+            back to 2
+          </label>
+        </div>
+      </div>
+    </div>,
+  ],
+}
+`;

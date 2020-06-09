@@ -71,6 +71,13 @@ export default function RollColumn(props) {
         -webkit-transform:translateX(${calcCol}%);
         transform:translateX(${calcCol}%);
       }
+      /*${col.id}*/
+      #ctrl-${name}-${col.order}:checked ~ .${css.content} #${col.id} {
+        animation: ${css.rcfadein} linear 0.6s;
+      }
+      #ctrl-${name}-${col.order}:not(:checked) ~ .${css.content} #${col.id} {
+        animation: ${css.rcfadeout} linear 0.6s;
+      }
       `;
       })
       .join('');
