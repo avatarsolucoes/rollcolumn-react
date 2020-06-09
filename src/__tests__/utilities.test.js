@@ -2,8 +2,6 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { shallow, mount } from 'enzyme';
 
-import { round } from '../utilities/formats';
-
 import RollColumn, { Column, LabelColumn, gotoColumn } from '..';
 
 function Test() {
