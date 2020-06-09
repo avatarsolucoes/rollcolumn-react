@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-properties */
 /**
  * Arredonda numero com casas decimais
  * @function round

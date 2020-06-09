@@ -25,7 +25,7 @@ function getExternal() {
 }
 
 export default {
-  input: './packages/index.js',
+  input: './src/index.js',
   external: getExternal(),
   output: [
     {
@@ -50,7 +50,7 @@ export default {
     postcss({
       modules: true,
       autoModules: false,
-      minimize: true,
+      // minimize: true,
       // extract: true,
       plugins: [postcssUrl(), postcssImport()],
     }),
@@ -64,16 +64,8 @@ export default {
           declarationDir: pkg.typings,
           declarationMap: true,
         },
-        include: ['./packages'],
-        exclude: [
-          'node_modules',
-          'build',
-          'dist',
-          'example',
-          'rollup.config.js',
-          'packages/__tests__',
-          'packages/setup*.js',
-        ],
+        include: ['./src'],
+        exclude: ['node_modules', 'build', 'dist', 'example', 'rollup.config.js', 'src/__tests__', 'src/setup*.js'],
       },
       rollupCommonJSResolveHack: false,
       clean: true,
