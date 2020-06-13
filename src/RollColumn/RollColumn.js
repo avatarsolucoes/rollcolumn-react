@@ -34,6 +34,10 @@ export default function RollColumn(props) {
     [onColumnChange],
   );
 
+  const getNumColumns = useCallback(() => {
+    return columnList.length;
+  }, [columnList]);
+
   const columnRegister = useCallback(
     (columnProps) => {
       setColumnList((oldList) => {
@@ -43,6 +47,7 @@ export default function RollColumn(props) {
         setColumnWidth(`${result.length * 100}%`);
         return result;
       });
+      return 0;
     },
     [name, handleColumnChange],
   );
@@ -95,7 +100,7 @@ export default function RollColumn(props) {
     <StyleCacheProvider>
       <Style css={buildStyles(columnList)} />
       <div id={name} className={mainClass}>
-        <MainContext.Provider value={{ columnRegister, handleColumnChange, registerLabel, getName }}>
+        <MainContext.Provider value={{ columnRegister, handleColumnChange, registerLabel, getName, getNumColumns }}>
           <RenderInputs name={name} columnList={columnList} />
           <div className={contentClass} style={styles}>
             {children}

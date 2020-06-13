@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test formats Test shallow  1`] = `"<style></style><div id=\\"myName\\" class=\\"\\"><div class=\\"\\" style=\\"width:300%;max-width:300%\\"><div id=\\"rollcolumn-item-myName-1\\" class=\\"\\"><p>Content 1</p><label id=\\"rollcolumn-label-myName-2\\" for=\\"\\" class=\\"\\">goto 2</label><button type=\\"button\\" class=\\"goto\\">GOTO 2</button></div><div id=\\"rollcolumn-item-myName-2\\" class=\\"\\"><p>Content 1</p><label id=\\"rollcolumn-label-myName-1\\" for=\\"\\" class=\\"\\">back to 1</label><label id=\\"rollcolumn-label-myName-3\\" for=\\"\\" class=\\"\\">back to 3</label><button type=\\"button\\" class=\\"goto\\">GOTO 1</button></div><div id=\\"rollcolumn-item-myName-3\\" class=\\"\\"><p>Content 3</p><label id=\\"rollcolumn-label-myName-1\\" for=\\"\\" class=\\"\\">back to 1</label><label id=\\"rollcolumn-label-myName-2\\" for=\\"\\" class=\\"\\">back to 2</label></div></div></div>"`;
+exports[`Test formats Test shallow  1`] = `"<style></style><div id=\\"myName\\" class=\\"\\"><div class=\\"\\" style=\\"width:300%;max-width:300%\\"><div id=\\"rollcolumn-item-myName-1\\" class=\\"\\" style=\\"width:Infinity%\\"><p>Content 1</p><label id=\\"rollcolumn-label-myName-2\\" for=\\"\\" class=\\"\\">goto 2</label><button type=\\"button\\" class=\\"goto\\">GOTO 2</button></div><div id=\\"rollcolumn-item-myName-2\\" class=\\"\\" style=\\"width:Infinity%\\"><p>Content 1</p><label id=\\"rollcolumn-label-myName-1\\" for=\\"\\" class=\\"\\">back to 1</label><label id=\\"rollcolumn-label-myName-3\\" for=\\"\\" class=\\"\\">back to 3</label><button type=\\"button\\" class=\\"goto\\">GOTO 1</button></div><div id=\\"rollcolumn-item-myName-3\\" class=\\"\\" style=\\"width:Infinity%\\"><p>Content 3</p><label id=\\"rollcolumn-label-myName-1\\" for=\\"\\" class=\\"\\">back to 1</label><label id=\\"rollcolumn-label-myName-2\\" for=\\"\\" class=\\"\\">back to 2</label></div></div></div>"`;
 
 exports[`Test formats render RollColumn 1`] = `ReactWrapper {}`;
 
@@ -33,6 +33,7 @@ Object {
           style={
             Object {
               "order": undefined,
+              "width": "Infinity%",
             }
           }
         >
@@ -64,6 +65,7 @@ Object {
           style={
             Object {
               "order": undefined,
+              "width": "Infinity%",
             }
           }
         >
@@ -106,6 +108,7 @@ Object {
           style={
             Object {
               "order": undefined,
+              "width": "Infinity%",
             }
           }
         >

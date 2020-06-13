@@ -7,7 +7,7 @@ import MainContext from './DefaultContext';
 
 export default function Column(props) {
   const colRef = useRef();
-  const { columnRegister, getName } = useContext(MainContext);
+  const { columnRegister, getName, getNumColumns } = useContext(MainContext);
   const { children, className, order, checked, value, name, style, onCheck } = props;
 
   const columnProps = { name: getName ? getName() : name };
@@ -27,7 +27,9 @@ export default function Column(props) {
     }
   }, [columnRegister, order, checked, value, onCheck]);
 
-  const styles = { ...style, order: columnProps.order };
+  // console.log('useEffect', getNumColumns());
+
+  const styles = { ...style, order: columnProps.order, width: `${100 / getNumColumns()}%` };
   const classe = cx(css.item, className);
 
   return (
